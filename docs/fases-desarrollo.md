@@ -14,3 +14,6 @@ Pruebas E2E, seguridad, rendimiento, respaldos y capacitación. Criterio: operac
 ## Fase 6 — Extensiones
 Inventario, delivery, portal cliente, WhatsApp y facturación electrónica según demanda. Plan futuro con facturación: S/ 44.90/mes, no disponible hasta integrar y probar el proveedor.
 No iniciar una fase sin autorización explícita.
+
+## Subalcance autorizado: Fase 1A
+Integración Supabase, Auth SSR, identidad, membresías, alta de lavandería y pruebas RLS de esas tablas. Código y pruebas locales en `fase-1a.md`; aplicación/configuración remota pendiente de autorización. No se inicia Fase 1B ni se conectan operaciones comerciales.

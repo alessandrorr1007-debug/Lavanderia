@@ -1,1 +1,14 @@
-import Link from "next/link";export default function Login(){return <main style={{maxWidth:450,margin:"12vh auto",padding:22}}><div className="card"><h1 style={{fontSize:28,fontWeight:800}}>Acceso a LavaGest</h1><p className="muted">Autenticación real pendiente de integración. Elige un panel de demostración:</p><div style={{display:"grid",gap:12,marginTop:25}}><Link className="button" href="/dashboard">Entrar como propietario (demo)</Link><Link className="button" href="/plataforma">Entrar como superadmin (demo)</Link></div><nav aria-label="Opciones de acceso" className="auth-links"><Link href="/registro">Registro (pendiente)</Link><Link href="/recuperar-contrasena">Recuperar contraseña</Link><Link href="/">Volver al inicio</Link></nav><p className="muted" style={{fontSize:12,marginTop:24}}>Estas rutas NO verifican identidad. No utilizar con información real.</p></div></main>}
+import { AuthCard } from "@/components/forms/auth-card";
+import { AuthForm } from "@/components/forms/auth-form";
+import { loginAction } from "../actions";
+export default async function Login({ searchParams }: { searchParams: Promise<{ actualizada?: string; salida?: string }> }) {
+  const params = await searchParams;
+  return <AuthCard title="Acceso a LavaGest" description="Inicia sesión con tu cuenta. Los permisos se verifican en el servidor.">
+    {params.actualizada === "1" && <p className="notice" role="status">Contraseña actualizada. Inicia sesión nuevamente.</p>}
+    {params.salida === "1" && <p className="notice" role="status">Sesión cerrada.</p>}
+    <AuthForm action={loginAction} submitLabel="Iniciar sesión" fields={[
+      { name: "email", label: "Correo electrónico", type: "email", autoComplete: "email", maxLength: 254 },
+      { name: "password", label: "Contraseña", type: "password", autoComplete: "current-password" },
+    ]} />
+  </AuthCard>;
+}
