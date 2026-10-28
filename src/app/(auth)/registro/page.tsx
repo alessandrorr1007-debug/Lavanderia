@@ -1,0 +1,1 @@
+import Link from "next/link";export default function Page(){return <main className="card" style={{maxWidth:520,margin:"10vh auto"}}><h1>Registro de lavandería</h1><p className="muted">Próxima fase: registro real con verificación y alta segura de negocio.</p><Link href="/" className="button">Volver al inicio</Link></main>}

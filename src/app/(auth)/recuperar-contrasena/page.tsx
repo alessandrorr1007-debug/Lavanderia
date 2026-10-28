@@ -1,0 +1,1 @@
+import Link from "next/link";export default function Page(){return <main className="card" style={{maxWidth:520,margin:"10vh auto"}}><h1>Recuperar contraseña</h1><p className="muted">Próxima fase: recuperación mediante Supabase Auth.</p><Link href="/login" className="button">Volver</Link></main>}

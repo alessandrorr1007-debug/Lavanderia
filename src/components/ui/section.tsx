@@ -1,0 +1,1 @@
+export function Section({title,description,children}:{title:string;description:string;children?:React.ReactNode}){return <><div style={{marginBottom:25}}><h1 style={{fontSize:29,fontWeight:800,margin:0}}>{title}</h1><p className="muted" style={{marginTop:8}}>{description}</p></div>{children}</>;}

@@ -1,0 +1,1 @@
+import {Section} from "@/components/ui/section";export default function Page(){return <Section title="Soporte" description="Gestión de incidencias: pendiente."><div className="card"><span className="pill">Modo demostración</span><p className="muted" style={{marginTop:14}}>No hay conexiones a negocios reales ni acciones administrativas activas.</p></div></Section>;}

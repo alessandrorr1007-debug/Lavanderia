@@ -1,0 +1,1 @@
+-- Sin seed real. Datos ficticios de interfaz en src/lib/demo.ts.
